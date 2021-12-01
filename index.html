@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="main">
+        <div class ="display2">
+            0
+        </div>
+        <div class ="display">
+            0
+        </div>
+        <div class ="functions">
+            <button onclick=clears()>C</button>
+        </div>
+        <div class ="interface">
+            <div class ="numbers">
+                <button onclick=displayer(7)>7</button>
+                <button onclick=displayer(8)>8</button>
+                <button onclick=displayer(9)>9</button>
+                <button onclick=displayer(4)>4</button>
+                <button onclick=displayer(5)>5</button>
+                <button onclick=displayer(6)>6</button>
+                <button onclick=displayer(1)>1</button>
+                <button onclick=displayer(2)>2</button>
+                <button onclick=displayer(3)>3</button>
+                <button onclick=displayer(0)>0</button>
+                <button onclick=displayer(".")>.</button>
+                <button onclick=calculate()>=</button>
+            </div>
+
+            <div class ="operators">
+                <button onclick=readNum("-")>-</button>
+                <button onclick=readNum("+")>+</button>
+                <button onclick=readNum("*")>*</button>
+                <button onclick=readNum("/")>/</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
