@@ -4,6 +4,7 @@ let a = 0;
 let b = 0;
 let choo;
 let dot;
+let disabler = 0;
 
 const add = function(a,b){
     result = Number(a) + Number(b);
@@ -37,6 +38,10 @@ const operate = function(a,b,operator) {
 const displayer = function(n){
     console.log(n);
     console.log(typeof(n));
+    if (n === "."){disabler ++}
+
+    if (disabler > 1 && n === "."){ return;}
+
     if (n === "." && display.innerHTML === "0"){display.innerHTML = "0" + n; return;};
     if (display.innerHTML === "0"){display.innerHTML = n}
     else{
@@ -45,6 +50,7 @@ const displayer = function(n){
 }
 
 const readNum = function(sign){
+   disabler = 0; 
    if (!display2.innerHTML == 0){calculate()}  
    choo = sign; 
    a = display.innerHTML;
@@ -69,4 +75,5 @@ const clears = function(){
     b = 0;
     display.innerHTML = 0;
     display2.innerHTML = 0;
+    disabler = 0;
 }
