@@ -13,16 +13,19 @@ const add = function(a,b){
 
 const subtract = function(a,b){
     result = Number(a) - Number(b);
+    if(!Number.isInteger(result)){result = result.toFixed(2);}
     return result;
 }
 
 const multiply = function(a,b){
     result = Number(a) * Number(b);
+    if(!Number.isInteger(result)){result = result.toFixed(2);}
     return result;
 }
 
 const divide = function(a,b){
     result = Number(a) / Number(b)
+    if(!Number.isInteger(result)){result = result.toFixed(2);}
     return result;
 }
 
@@ -32,7 +35,10 @@ const operate = function(a,b,operator) {
 }
 
 const displayer = function(n){
-    if (display.innerHTML == 0){ display.innerHTML = n}
+    console.log(n);
+    console.log(typeof(n));
+    if (n === "."){display.innerHTML = "0" + n; return;};
+    if (display.innerHTML === "0"){display.innerHTML = n}
     else{
     display.innerHTML += n;
     }
