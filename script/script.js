@@ -37,7 +37,7 @@ const operate = function(a,b,operator) {
 const displayer = function(n){
     console.log(n);
     console.log(typeof(n));
-    if (n === "."){display.innerHTML = "0" + n; return;};
+    if (n === "." && display.innerHTML === "0"){display.innerHTML = "0" + n; return;};
     if (display.innerHTML === "0"){display.innerHTML = n}
     else{
     display.innerHTML += n;
