@@ -77,3 +77,7 @@ const clears = function(){
     display2.innerHTML = 0;
     disabler = 0;
 }
+
+const minusing = function(){
+    display.innerHTML = display.innerHTML * -1;
+}
