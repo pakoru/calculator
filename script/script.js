@@ -3,7 +3,6 @@ const display2 = document.querySelector(".display2");
 let a = 0;
 let b = 0;
 let choo;
-let dot;
 let disabler = 0;
 
 const add = function(a,b){
@@ -76,6 +75,7 @@ const clears = function(){
     display.innerHTML = 0;
     display2.innerHTML = 0;
     disabler = 0;
+    choo = 0;
 }
 
 const minusing = function(){
