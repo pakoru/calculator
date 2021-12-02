@@ -45,6 +45,7 @@ const displayer = function(n){
 }
 
 const readNum = function(sign){
+   if (!display2.innerHTML == 0){calculate()}  
    choo = sign; 
    a = display.innerHTML;
    console.log(a);
