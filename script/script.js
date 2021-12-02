@@ -31,7 +31,8 @@ const divide = function(a,b){
 
 const operate = function(a,b,operator) {
     display2.innerHTML = a + " " + choo + " " + b + " ="
-    display.innerHTML = operator(a,b);   
+    display.innerHTML = operator(a,b);
+    choo = 0;
 }
 
 const displayer = function(n){
@@ -56,11 +57,12 @@ const readNum = function(sign){
    console.log(a);
    display.innerHTML += sign;
    display2.innerHTML = display.innerHTML;
-   display.innerHTML = 0; 
+   display.innerHTML = 0;
 }
 
 const calculate = function(){
     b = display.innerHTML;
+    console.log(a);
     console.log(b);
     if (choo === "-"){operate(a,b,subtract)}
     if (choo === "+"){operate(a,b,add)}
