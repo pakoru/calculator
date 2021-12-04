@@ -125,4 +125,4 @@ function yellowNeon(){
     mainContainer.addEventListener('transitionend',pinkNeon);
 }
 
-pinkNeon();
+window.onload = pinkNeon();
