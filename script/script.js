@@ -75,7 +75,7 @@ const clears = function(){
     a = 0;
     b = 0;
     display.innerHTML = 0;
-    display2.innerHTML = 0;
+    display2.innerHTML = "";
     disabler = 0;
     choo = 0;
 }
@@ -83,3 +83,46 @@ const clears = function(){
 const minusing = function(){
     display.innerHTML = display.innerHTML * -1;
 }
+
+
+const mainContainer = document.querySelector('.main');
+
+
+
+
+function pinkNeon (){
+    mainContainer.removeEventListener('transitionend',pinkNeon);
+    mainContainer.classList.remove('neonyellow');
+    mainContainer.classList.add('neonpink');
+    mainContainer.addEventListener('transitionend',redNeon);
+}
+
+function redNeon(){
+    mainContainer.removeEventListener('transitionend',redNeon);
+    mainContainer.classList.remove('neonpink');
+    mainContainer.classList.add('neonred');
+    mainContainer.addEventListener('transitionend',greenNeon);
+}
+
+function greenNeon(){
+    mainContainer.removeEventListener('transitionend',greenNeon);
+    mainContainer.classList.remove('neonred');
+    mainContainer.classList.add('neongreen');
+    mainContainer.addEventListener('transitionend',blueNeon);
+}
+
+function blueNeon(){
+    mainContainer.removeEventListener('transitionend',blueNeon);
+    mainContainer.classList.remove('neongreen');
+    mainContainer.classList.add('neonblue');
+    mainContainer.addEventListener('transitionend',yellowNeon);
+}
+
+function yellowNeon(){
+    mainContainer.removeEventListener('transitionend',yellowNeon);
+    mainContainer.classList.remove('neonblue');
+    mainContainer.classList.add('neonyellow');
+    mainContainer.addEventListener('transitionend',pinkNeon);
+}
+
+pinkNeon();
