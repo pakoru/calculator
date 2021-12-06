@@ -23,6 +23,13 @@ body{
     padding: 15px 0px;
     box-shadow:5px 2px black;
     border-radius: 10px;
+
+    animation-name: neonColorPalette;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
 }
 
 
@@ -95,22 +102,20 @@ button:hover{
     width:120px;
 }
 
-.neonpink {
-    box-shadow: 0 0 5px #ff00de, 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 40px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de;
-}
-.neonred{
-    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff, 0 0 90px #00ffff;
-}
-.neongreen{
-    box-shadow: 0 0 5px #00ff55, 0 0 10px #00ff55, 0 0 20px #00ff55, 0 0 40px #00ff55, 0 0 80px #00ff55, 0 0 90px #00ff55;
-}
-.neonblue{
-    box-shadow: 0 0 5px #955cff, 0 0 10px #955cff, 0 0 20px #955cff, 0 0 40px #955cff, 0 0 80px #955cff, 0 0 90px #955cff;
-}
-.neonyellow{
-    box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000;
-}
-
-.neonpink, .neonred, .neongreen, .neonblue, .neonyellow {
-    transition: all 2s;
+@keyframes neonColorPalette {
+    0%{
+        box-shadow: 0 0 5px #ff00de, 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 40px #ff00de, 0 0 80px #ff00de, 0 0 90px #ff00de;
+    }
+    25%{
+        box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff, 0 0 90px #00ffff;
+    }
+    50%{
+        box-shadow: 0 0 5px #00ff55, 0 0 10px #00ff55, 0 0 20px #00ff55, 0 0 40px #00ff55, 0 0 80px #00ff55, 0 0 90px #00ff55;
+    }
+    75%{
+        box-shadow: 0 0 5px #955cff, 0 0 10px #955cff, 0 0 20px #955cff, 0 0 40px #955cff, 0 0 80px #955cff, 0 0 90px #955cff;
+    }
+    100%{
+        box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000;
+    }
 }
